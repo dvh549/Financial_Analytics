@@ -18,7 +18,7 @@ svml_model = pickle.load(open('UI/predictors/svm_linear_kernel_oversampled.pkl',
 # possible inputs sorted list according to encoded values
 gender = ["M", "F"]
 family = ['Civil Marriage', 'Married', 'Single / Not Married', 'Separated', 'Widow']
-jobs = ['Accountants', 'Cleaning Staff', 'Cooking Staff', 'Core Staff', 'Drivers', 'HR Staff', 'High Skill Tech Staff', 'IT Staff', 'Laborers', 'Low-Skill Laborers', 'Managers', 'Medical Staff', 'Private Service Staff', 'Realty Agents', 'Sales Staff', 'Secretaries', 'Security Staff', 'Waiter / Waitress Staff']
+jobs = ['Accountants', 'Cleaning Staff', 'Cooking Staff', 'Core Staff', 'Drivers', 'HR Staff', 'High Skill Tech Staff', 'IT Staff', 'Laborers', 'Low-Skill Laborers', 'Managers', 'Medicine Staff', 'Private Service Staff', 'Realty Agents', 'Sales Staff', 'Secretaries', 'Security Staff', 'Unemployed', 'Waiters / Barmen Staff']
 education = ['Lower Secondary', 'Secondary / Special Secondary', 'Incomplete Higher', 'Higher Education', 'Academic Degree']
 housing = ['Co-op apartment', 'House / apartment', 'Municipal apartment	', 'Office apartment', 'Rented apartment', 'With parents']
 income = ['Commercial Associate', 'Pensioner', 'State Servant', 'Student', 'Working']
