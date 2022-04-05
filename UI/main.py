@@ -211,10 +211,15 @@ if st.button("Click to generate credit risk summary"):
     if prediction == 1:
         default_msg = "The customer is **likely** to default. "
     
-    st.write( default_msg + "He has " + rating + " credit score of "+ "**" + str(final_score) + "**" +". The table below shows the breakdown of the score: ")
+    st.write( default_msg + "He has " + rating + " credit score of "+ "**" + str(int(final_score))   + "**" +". The table below shows the breakdown of the score: ")
 
     # test_score['BASE SCORE'] = 600
-    test_score.insert (0, "BASE SCORE", [600])
+    test_score.insert(0, "BASE_SCORE_points", [600])
+    # convert individual feature points to int
+    for column in test_score.columns:
+        test_score[column] = int(test_score[column])
+    test_score["FINAL_SCORE_points"] = test_score["score"]
+    test_score.drop(["score"], axis=1, inplace=True)
     print(test_score)
     st.table(test_score.loc[0, :])
     
