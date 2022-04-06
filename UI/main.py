@@ -220,8 +220,10 @@ if st.button("Click to generate credit risk summary"):
         test_score[column] = int(test_score[column])
     test_score["FINAL_SCORE_points"] = test_score["score"]
     test_score.drop(["score"], axis=1, inplace=True)
+    test_score.insert(0, "SCORE_BREAKDOWN", ["CUSTOMER_SCORE_BREAKDOWN"])
+    test_score.set_index("SCORE_BREAKDOWN", inplace=True)
     print(test_score)
-    st.table(test_score.loc[0, :])
+    st.table(test_score.loc["CUSTOMER_SCORE_BREAKDOWN", :])
     
     #  st.image("https://static.streamlit.io/examples/dice.jpg")
 
